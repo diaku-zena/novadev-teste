@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensagens</title>
+    <style>
+        body{
+            margin: 0;
+            height: 100vh;
+        }
+        header{
+            display: grid;
+            place-items: center;
+            font-size: 50px;
+            font-weight: 600;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            margin-top: 50px;
+            padding: 30px;
+            height: 100vh;
+        }
+        .nome {
+            display: flex;
+            align-items: center;
+            margin-bottom: 4px solid #000;
+        }
+        span{
+            border-bottom: #000 solid 1px;
+        }
+        .voltar{
+            margin-top: 20px;
+        }
+        .voltar a {
+            font-size: 17px;
+            background-color: rgb(20, 81, 116);
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+    <header style="height: 200px; background-color: #ccc;">M E N S A G E N S</header>
+    <div class="container">
+
+        {% for msg in mensagens %}
+        <div class="nome">
+            <h3>Nome:</h3>
+            <p>{{ msg.nome }}</p>
+
+        </div>
+        <div class="nome">
+            <h3>Telefone: </h3>
+            <p>{{ msg.telefone }}</p>
+        </div>
+        <div class="nome">
+            <h3>email: </h3>
+            <p>{{ msg.email }}</p>
+        </div>
+        <div class="nome">
+            <h3>mensagem: </h3>
+            <p>{{ msg.mensagem }}</p>
+        </div>
+        <hr>
+        {% empty %}
+            <p>Nao existem mensagens disponiveis</p>
+        {% endfor %}
+
+        <div class="voltar">
+            <a href="{% url 'teste:inicio' %}">Voltar</a>
+        </div>
+    </div>
+</body>
+</html>

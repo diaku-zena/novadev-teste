@@ -1,0 +1,195 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TELA DEV</title>
+    <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+    <link rel="stylesheet" href="{% static 'css/all.min.css' %}">
+</head>
+
+<body>
+    <div class="cabecalho">
+        <header>
+            <div class="logo">
+                <img src="{% static 'images/logo.png' %}" alt="">
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Contactos</a></li>
+                </ul>
+            </div>
+
+        </header>
+        <div class="pub wrapper">
+            <div class="texto-pub">
+                <h1 class="titulo-blog">Blog</h1>
+                <h2 class="titulo-blog-2">Nova Dev 2022</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et nulla, accusamus totam inventore animi veniam nihil maiores laborum eius labore libero repellendus necessitatibus nostrum suscipit, nobis molestias ut dolore sint?</p>
+            </div>
+            <div class="pub-img">
+                <img src="{% static 'images/box_img.png' %}" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="seccao-principal">
+        <div class="container">
+            <p id="blog-title">Nosso Blog</p>
+
+            <div class="card card-1">
+                <div class="card-1-item">
+                    <img src="{{ MEDIA_CDN }}{{ imagens.1 }}" alt="">
+                </div>
+                <div class="card-1-item maior-foto">
+                    <h2>{{ titulos.1 }}</h2>
+                    <p>{{ descricoes.1 | truncatewords:50 }}</p>
+                    <div class="descricao">
+                        <span>Postado por: {{ autores.1 }}</span>
+
+                        <span style="margin-left: 25px;" class="fas fa-heart"> like</span>
+                        <span style="margin-left: 25px;" class="fas fa-comment"> Comentario</span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card card-2">
+                <div class="card-2-img">
+                    <h1>{{ titulos.3 }}</h1>
+                    <p>{{ descricoes.3 | truncatewords:50 }}</p>
+                    <div class="descricao">
+                        <span>Postado por: {{ autores.3 }}</span>
+
+                        <span style="margin-left: 25px;" class="fas fa-heart"> like</span>
+                        <span style="margin-left: 25px;" class="fas fa-comment"> Comentario</span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card card-3">
+                <div class="card-3-item">
+                    <div class="card-3-img">
+                        <img src="{{ MEDIA_CDN }}{{ imagens.2 }}" alt="">
+
+                    </div>
+                    <div class="card-3-texto">
+                        <div class="titulo-card3">
+                            <h3 style="margin: 5px 10px;">{{ titulos.2 }}</h3>
+                        </div>
+                        <div class="descricao" style="margin: 20px 10px;">
+                            <span>Postado por: {{ autores.2 }}</span>
+
+                            <span style="margin-left: 25px;" class="fas fa-heart"> like</span>
+                            <span style="margin-left: 25px;" class="fas fa-comment"> Comentario</span>
+                        </div>
+                        <p style="margin: 20px 10px;">{{ descricoes.2 | truncatewords:60 }}</p>
+                    </div>
+                </div>
+                <div class="card-3-item">
+                    <div class="card-3-img">
+                        <img src="{{ MEDIA_CDN }}{{ imagens.5 }}" alt="">
+
+                    </div>
+                    <div class="card-3-texto">
+                        <div class="titulo-card3">
+                            <h3 style="margin: 5px 10px;">{{ titulos.5 }}</h3>
+                        </div>
+                        <div class="descricao" style="margin: 20px 10px;">
+                            <span>Postado por: {{ autores.5 }}</span>
+
+                            <span style="margin-left: 25px;" class="fas fa-heart"> like</span>
+                            <span style="margin-left: 25px;" class="fas fa-comment"> Comentario</span>
+                        </div>
+                        <p style="margin: 20px 10px; padding: 0 0 20px 0px">{{ descricoes.5 | truncatewords:25 }}</p>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="card card-1">
+                <div class="card-1-item">
+                    <img src="{{ MEDIA_CDN }}{{ imagens.4 }}" alt="">
+                </div>
+                <div class="card-1-item maior-foto">
+                    <h2>{{ titulos.4 }}</h2>
+                    <p>{{ descricoes.4 }}</p>
+                    <div class="descricao">
+                        <span>Postado por: {{ autores.4 }}</span>
+
+                        <span style="margin-left: 25px;" class="fas fa-heart"> like</span>
+                        <span style="margin-left: 25px;" class="fas fa-comment"> Comentario</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="testemunha">
+            <div class="container">
+                <div class="testemunha-img">
+                    <img src="{% static 'images/plan1.png' %}" alt="">
+                </div>
+                <div class="content">
+                    <h1 class="testemunha-titulo">Testemunha</h1>
+                    <h3>WILL SMITHE</h3>
+
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae quo maxime voluptatibus, quam fugit eaque aliquam, iure quibusdam optio inventore consectetur, quod temporibus id totam sequi. Dicta vel quasi molestiae.
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut, eveniet quis! Architecto in eaque cumque itaque quaerat dolorum laborum atque minima, fugit, repellendus blanditiis, neque iste impedit labore corrupti numquam.</p>
+                </div>
+            </div>
+        </div>
+        <div class="formulario">
+            <div class="container">
+                <h1 style="margin: 70px; text-align: center; font-size: 62px;">Contactos</h1>
+                <form action="{% url 'teste:inicio' %}" method='post' class="form">
+                    {% csrf_token %}
+                    {{ form.non_field_errors }}
+                    <div class="form-item">
+                        <!-- <input type="text" placeholder="Nome"> -->
+                        {{ form.nome.errors }}
+                        {{ form.nome }}
+                    </div>
+                    <div class="form-item">
+                        {{ form.telefone.errors }}
+                        <!-- <input type="text" placeholder="Telefone"> -->
+                        {{ form.telefone }}
+                    </div>
+                    <div class="form-item">
+                        {{ form.email.errors}}
+                        <!-- <input type="text" placeholder="Email"> -->
+                        {{ form.email }}
+                    </div>
+                    <div class="form-item">
+                        {{ form.mensagem.errors}}
+                        <!-- <input type="text" placeholder="Mensagem"> -->
+                        {{ form.mensagem }}
+                    </div>
+                    <div class="form-submit">
+                        <input type="submit" value="Enviar">
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div style="font-weight: 600; font-size: 32px; text-align: center; color: #156e59">By NovaDev</div>
+        <div style="font-weight: 600; text-align: center; margin: 0px 0 20px 0"><h2>Landing Page 2022</h2></div>
+        <div style="font-weight: 600; text-align: center; font-size: 18px" class="footer-social">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-linkedin-in"></i>
+        </div>
+        <div style="font-weight: 600; text-align: center;" class="footer-rights">
+            <p>
+                &copy 2022 All Rights Reserved. Design by NovaDev</div>
+            </p>
+    </footer>
+</body>
+
+</html>
